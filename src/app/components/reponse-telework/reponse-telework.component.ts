@@ -11,7 +11,7 @@ import { HelpdeskserviceService } from 'src/app/helpdeskservice.service';
 export class ReponseTeleworkComponent implements OnInit {
   btnDisabled:boolean = false;
   p:number=1;
-  itemPerPage:number=5;
+  itemPerPage:number=10;
   demandes:any;
   id?: any;
   isLoggedIn = false;

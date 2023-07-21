@@ -72,6 +72,18 @@ isLoggedIn:any;
                listProductss(motCle:string,page:number,size:number) {
                 return this.Http.get("http://localhost:8082/cherchertiquete?mc="+motCle+"&size"+size+"&page="+page)
                      }
+                     listProductsse(motCle:string,page:number,size:number) {
+                      return this.Http.get("http://localhost:8082/cherchertiquetes?mc="+motCle+"&size"+size+"&page="+page)
+                           }
+
+                           listProductssee(motCle:string,page:number,size:number) {
+                            return this.Http.get("http://localhost:8082/chercherteleworks?mc="+motCle+"&size"+size+"&page="+page)
+                                 }
+
+                                 listProductsseee(motCle:string,page:number,size:number) {
+                                  return this.Http.get("http://localhost:8082/chercherDparts?mc="+motCle+"&size"+size+"&page="+page)
+                                       }
+
                      listProductsss(status:string,page:number,size:number) {
                       return this.Http.get("http://localhost:8082/cherchers?mc="+status+"&size"+size+"&page="+page)
                            }

@@ -39,10 +39,10 @@
                   <h5 class="card-title">List of Requests</h5>
                   <div class="search">
                     
-                     <input class="searchTerm" type="text"
+                     <input class="searchTerm" type="text"[(ngModel)]="motCle" 
                     />
-                    <button class="bi bi-search"></button>
-                    <button class="bi bi-x"></button>
+                    <button class="bi bi-search"(click)="chercher()"></button>
+                    <button class="bi bi-x"(click)="cancal()"></button>
                     
                    </div>
                    

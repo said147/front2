@@ -28,6 +28,8 @@ export class ReponseHandoverComponent implements OnInit {
     content:any;
     a:any;
     pages:Array<number> | undefined;
+    motCle:string="";
+    Tiquetes:any;
   constructor(private service: HelpdeskserviceService,private sharedService: SharedService,private tokenStorageService: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
@@ -91,18 +93,18 @@ export class ReponseHandoverComponent implements OnInit {
    
   }
   doSearch() {
-    if(this.status==""){
+    if(this.motCle==""){
       this.ngOnInit();
     }
 
- else{
-  this.service.listProductss(this.status,this.currentPage,this.size).subscribe(
+ else {
+  this.service.listProductsse(this.motCle,this.currentPage,this.size).subscribe(
     response => {
-    this.demandes= Object.values(response);
-    this.pages=new Array(this.demandes.totalPages);
+    this.demande= response;
+    this.pages=new Array(this.Tiquetes.totalPages);
     
-    this.demandes.push( response);
-    console.log(this.demandes);
+    
+    console.log(this.demande);
    }
    
    );
